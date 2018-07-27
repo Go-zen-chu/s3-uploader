@@ -1,0 +1,6 @@
+---
+applications:
+- name: s3-uploader
+  disk: 4G
+  memory: 512M
+  buildpack: binary_buildpack
