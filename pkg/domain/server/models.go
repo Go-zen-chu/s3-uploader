@@ -5,6 +5,7 @@ import "os"
 // models are structs of entities
 
 type Config struct {
+	Port string
 	S3Endpoint string
 	S3Bucket string
 	S3Region string
@@ -24,5 +25,6 @@ func (c *Config) SetToEnvVar () error {
 	if err := os.Setenv("AWS_SECRET_KEY", c.S3SecretKey); err != nil {
 		return err
 	}
+	return nil
 }
 
