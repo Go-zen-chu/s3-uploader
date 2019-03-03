@@ -8,7 +8,7 @@ Supports cloud foundry app.
 [golang-standards/project-layout: Standard Go Project Layout](https://github.com/golang-standards/project-layout)
 
 ## dev
+
 ```
-dep ensure
 go run cmd/s3-uploader/main.go
 ```

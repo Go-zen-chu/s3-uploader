@@ -16,21 +16,18 @@ type App interface {
 type app struct {
 }
 
-
 func NewApp () App {
 	return &app {}
 }
 
 
-// App
-type App interface {
-	Run() error
-}
-
 // Run : run application
 func (a *app) Run () error {
+	var (
+		port = flag.String("port", "8080", "port for server")
+		s3AccessKey = flag.String("s3-access-key", "8080", "port for server")
+	)
 
-	s, err :=
 	http.HandleFunc("/", web.IndexHandler)
 	http.HandleFunc("/upload", web.FileUploadHandler)
 	http.HandleFunc("/uploaded", web.ShowUploadedHandler)
